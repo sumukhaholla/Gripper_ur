@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Assem4">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="7.5379E-05 -1.7863E-05 -0.052175"
+        rpy="0 0 0" />
+      <mass
+        value="0.288" />
+      <inertia
+        ixx="0.00044292"
+        ixy="3.9463E-09"
+        ixz="1.0751E-06"
+        iyy="0.00041439"
+        iyz="-9.7511E-08"
+        izz="0.00016773" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem4/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem4/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Gripper">
+    <inertial>
+      <origin
+        xyz="-3.14822121343953E-09 -0.0312040521053478 -0.00190476695865634"
+        rpy="0 0 0" />
+      <mass
+        value="0.0440252057450354" />
+      <inertia
+        ixx="3.30385192436004E-05"
+        ixy="-1.61557236672195E-12"
+        ixz="1.05661121855516E-12"
+        iyy="1.14828351340465E-05"
+        iyz="-9.86750982333522E-06"
+        izz="3.31490902014423E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem4/meshes/Gripper.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem4/meshes/Gripper.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gripper"
+    type="prismatic">
+    <origin
+      xyz="0 -0.052113 -0.0875"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Gripper" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-0.019"
+      upper="0"
+      effort="0"
+      velocity="1" />
+  </joint>
+  <link
+    name="Gripper_2">
+    <inertial>
+      <origin
+        xyz="2.93233835395684E-09 -0.0312040519772931 0.0019047670421883"
+        rpy="0 0 0" />
+      <mass
+        value="0.044025205310264" />
+      <inertia
+        ixx="3.30385191700045E-05"
+        ixy="1.50117480053714E-12"
+        ixz="1.02948262033546E-12"
+        iyy="1.14828351824179E-05"
+        iyz="9.86750985977332E-06"
+        izz="3.31490902165463E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem4/meshes/Gripper_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assem4/meshes/Gripper_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gripper_2"
+    type="prismatic">
+    <origin
+      xyz="0 0.052113 -0.0875"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Gripper_2" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0.019"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
